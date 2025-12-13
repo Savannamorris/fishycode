@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Wave from "react-wavify";
-import.meta.env.BASE_URL
 import {
   UserIcon,
   BriefcaseIcon,
@@ -14,6 +13,7 @@ import {
   CommandLineIcon,
 } from "@heroicons/react/24/solid";
 import DraggableWindow from "./DraggableWindow.jsx";
+const BASE = import.meta.env.BASE_URL;
 
 export default function MacWindow() {
   const [windows, setWindows] = useState({
@@ -32,7 +32,7 @@ export default function MacWindow() {
 
   const playClick = () => {
     if (!soundOn) return;
-    const audio = new Audio("/sounds/click.mp3");
+    const audio = new Audio(`${BASE}sounds/click.mp3`);
     audio.play();
   };
 
