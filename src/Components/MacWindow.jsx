@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Wave from "react-wavify";
+import.meta.env.BASE_URL
 import {
   UserIcon,
   BriefcaseIcon,
@@ -181,7 +182,7 @@ export default function MacWindow() {
             <div className="flex items-center gap-4 p-4 bg-gray-100 border-b border-gray-300">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-300">
                 <img
-                  src="/profile.jpeg" // replace with your picture
+                  src={`${BASE}profile.jpeg`}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -334,7 +335,7 @@ export default function MacWindow() {
                     onClick={() => setSelectedArt(item)}
                   >
                     <img
-                      src={`/art/${item.img}`}
+                      src={`${BASE}art/${item.img}`}
                       alt={item.name}
                       className="w-full h-32 object-cover rounded-lg shadow"
                     />
@@ -348,7 +349,7 @@ export default function MacWindow() {
             <div className="flex gap-4 items-center bg-gray-100 p-2 rounded shadow">
               <div className="w-32 h-32 shrink-0 overflow-hidden rounded">
                 <img
-                  src="/projects/secret-santa.jpeg"
+                  src={`${BASE}projects/secret-santa.jpeg`}
                   alt="Secret Santa"
                   className="w-full h-full object-cover"
                 />
@@ -400,7 +401,7 @@ export default function MacWindow() {
           onClick={() => setSelectedArt(null)}
         >
           <img
-            src={`/art/${selectedArt.img}`}
+            src={`${BASE}art/${selectedArt.img}`}
             alt={selectedArt.name}
             className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
