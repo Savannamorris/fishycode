@@ -325,6 +325,7 @@ export default function MacWindow() {
             <div className="grid grid-cols-3 gap-4 justify-center">
               {[{ name: "PaperCranes", img: "paper-cranes.jpeg" },
               { name: "Persona", img: "persona.jpeg" },
+              { name: "Vivi", img: "vivi.jpeg" },
               { name: "Grades", img: "grades.jpeg" },
               { name: "Trucks", img: "trucks.jpeg" }]
 
