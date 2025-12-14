@@ -32,7 +32,7 @@ export default function MacWindow() {
 
   const playClick = () => {
     if (!soundOn) return;
-    const audio = new Audio(`${import.meta.env.BASE_URL}sounds/click.mp3`);
+    const audio = new Audio(`${BASE}sounds/click.mp3`);
     audio.play();
   };
 
